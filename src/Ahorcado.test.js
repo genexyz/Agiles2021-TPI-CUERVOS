@@ -194,7 +194,7 @@ test("Ingresar Letra - Ingreso un caracter especial", () => {
 
   const inputLetter = view.getByPlaceholderText("Ingrese Letra");
 
-  fireEvent.change(inputLetter, { target: { value: "1" } });
+  fireEvent.change(inputLetter, { target: { value: "@" } });
 
   fireEvent.submit(view.getByTestId("letter-form"));
 
