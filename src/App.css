@@ -1,38 +1,127 @@
-.App {
-  text-align: center;
+body {
+  background-color: #000000bd !important;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.brand {
+  color: white !important;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.brand-user {
+  color: white !important;
+  font-size: 1.25em !important;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.form-label {
+  color: white !important;
+  font-size: 1.15em !important;
 }
 
-.App-link {
-  color: #61dafb;
+.form-control {
+  background: none !important;
+  border: 3px solid white !important;
+  border-radius: 8px !important;
+  color: white !important;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.form-control:hover,
+.form-control:focus {
+  border: 3px solid white !important;
+  box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.1) !important;
+}
+
+.form-control::placeholder {
+  color: rgba(255, 255, 255, 0.575) !important;
+}
+
+.btn {
+  color: white !important;
+}
+
+.btn:focus,
+.btn:hover {
+  border: 0px !important;
+  box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.4) !important;
+}
+
+.btn-primary {
+  background-color: rgb(25, 135, 84) !important;
+  border: 0px !important;
+  box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.1) !important;
+}
+
+.btn-danger {
+  border: 0px !important;
+  box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.1) !important;
+}
+
+.change-word-btn {
+  border: 0px !important;
+  background-color: rgb(26, 27, 27) !important;
+}
+
+.pista-box {
+  color: white !important;
+  font-size: 1.3em !important;
+}
+
+.pista {
+  letter-spacing: 5px;
+  font-size: 1.8em !important;
+  text-transform: uppercase !important;
+}
+
+.alert {
+  border: 3px solid rgb(255, 255, 255) !important;
+}
+
+.alert-danger {
+  background-color: #f8dbdd !important;
+  color: #79141d !important;
+}
+
+.stats-box {
+  text-align: center !important;
+  padding: 1em !important;
+  padding-right: 0.2em !important;
+  padding-left: 0.2em !important;
+  margin-top: 1.25em !important;
+  margin-bottom: 1.25em !important;
+  margin: auto;
+  border: 1px solid white;
+  width: 315px !important;
+  border: 3px solid rgb(255, 255, 255) !important;
+  border-radius: 10px !important;
+  background-color: rgb(25, 135, 84) !important;
+  color: white !important;
+  font-size: 1.1em !important;
+  box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.1) !important;
+}
+
+.stats-titles {
+  font-weight: 700 !important;
+}
+
+.stats-letters {
+  letter-spacing: 3px !important;
+  text-transform: uppercase !important;
+}
+
+.modal-content {
+  background-color: #464646 !important;
+  border: 2px solid rgb(255, 255, 255) !important;
+}
+
+.modal-backdrop.show {
+  opacity: 0.8 !important;
+}
+
+.modal-title {
+  color: white !important;
+}
+
+.modal-endgame {
+  color: white !important;
+  text-align: center !important;
+  font-weight: bold !important;
+  font-size: 3em !important;
 }
