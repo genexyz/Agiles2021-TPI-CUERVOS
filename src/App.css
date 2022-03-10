@@ -86,8 +86,8 @@ body {
   padding-left: 0.2em !important;
   margin-top: 1.25em !important;
   margin-bottom: 1.25em !important;
-  margin: auto;
-  border: 1px solid white;
+  margin-left: auto;
+  margin-right: auto;
   width: 315px !important;
   border: 3px solid rgb(255, 255, 255) !important;
   border-radius: 10px !important;
