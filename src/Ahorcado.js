@@ -363,7 +363,8 @@ const Ahorcado = () => {
             </Form>
             <div className="stats-box">
               <div>
-                <span className="stats-titles">Vidas Restantes:</span> {vidasRestantes}
+                <span className="stats-titles">Vidas Restantes:</span>{" "}
+                <span data-testid="vidas">{vidasRestantes}</span>
               </div>
               <div>
                 <span className="stats-titles">Letras Incorrectas:</span>{" "}
