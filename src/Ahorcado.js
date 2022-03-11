@@ -141,7 +141,6 @@ const Ahorcado = () => {
   const handleNameSubmit = (e) => {
     e.preventDefault();
     const mensaje = ingresarNombre(e.target.elements[0].value);
-    console.log(mensaje);
     if (mensaje.error === 1) {
       setMsjInvalid(mensaje.mensaje);
       setShowAlert(true);
@@ -156,7 +155,6 @@ const Ahorcado = () => {
     setShowLetterAlert(false);
     e.preventDefault();
     const mensaje = ingresarLetra(e.target.elements[0].value);
-    console.log(mensaje);
     if (mensaje.error === 1) {
       setLetterMsjInvalid(mensaje.mensaje);
       setShowLetterAlert(true);
@@ -174,7 +172,6 @@ const Ahorcado = () => {
   const handleChangeWordSubmit = (e) => {
     e.preventDefault();
     const mensaje = ingresarPalabra(e.target.elements[0].value.toUpperCase());
-    console.log(mensaje);
     if (mensaje.error === 1) {
       setNewWordMsgStatus(mensaje.mensaje);
       setShowNewWordAlert(true);
@@ -206,7 +203,6 @@ const Ahorcado = () => {
   const handleWordSubmit = (e) => {
     e.preventDefault();
     const mensaje = ingresarPalabraNueva(e.target.elements[0].value.toUpperCase());
-    console.log(mensaje);
     if (mensaje.error === 1) {
       setMsjInvalid(mensaje.mensaje);
       setShowAlert(true);
