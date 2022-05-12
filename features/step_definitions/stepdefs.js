@@ -1,8 +1,25 @@
 const assert = require("assert");
 const { Given, When, Then } = require("@cucumber/cucumber");
+const { Builder, By, Key, until } = require("selenium-webdriver");
 
-Given("Me quedan vidas restantes", function () {
-  // Given general para los 4 escenarios, no es necesario escribirlo en cada uno
+// Given general para los 4 escenarios, no es necesario escribirlo en cada uno
+Given("Me quedan vidas restantes", async function () {
+  let driver = new Builder().forBrowser("chrome").build();
+
+  await driver.get("https://agiles2021-tpi-cuervos.vercel.app/");
+
+  console.log("------------------------- Logs Begin -------------------------");
+
+  await driver.findElement(By.id("formUsername")).sendKeys("Usuario");
+
+  await driver.findElement(By.className("btn-primary")).click();
+
+  var letterTextbox = await driver.findElement(By.id("formLetter"));
+  await letterTextbox.sendKeys("V");
+  console.log(await letterTextbox.getAttribute("value"));
+
+  await driver.quit();
+
   return "success";
 });
 

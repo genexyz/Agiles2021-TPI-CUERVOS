@@ -360,7 +360,9 @@ const Ahorcado = () => {
             <div className="stats-box">
               <div>
                 <span className="stats-titles">Vidas Restantes:</span>{" "}
-                <span data-testid="vidas">{vidasRestantes}</span>
+                <span data-testid="vidas" id="vidas">
+                  {vidasRestantes}
+                </span>
               </div>
               <div>
                 <span className="stats-titles">Letras Incorrectas:</span>{" "}
