@@ -2,6 +2,7 @@
 import { fireEvent, render } from "@testing-library/react";
 import "@testing-library/jest-dom/extend-expect";
 import Ahorcado from "./Ahorcado";
+import React from "react";
 
 test("Nombre Usuario - Ingreso nombre vacio", () => {
   const view = render(<Ahorcado />);
@@ -44,7 +45,7 @@ test("Nombre Usuario - Ingreso nombre con caracteres invalidos", () => {
 
   const input = view.getByPlaceholderText("Ingrese Nombre de Usuario");
 
-  fireEvent.change(input, { target: { value: "Gianfranco@" } });
+  fireEvent.change(input, { target: { value: "Pedro@" } });
 
   fireEvent.submit(view.getByTestId("name-form"));
 
@@ -56,11 +57,11 @@ test("Nombre Usuario - Ingreso nombre valido", () => {
 
   const input = view.getByPlaceholderText("Ingrese Nombre de Usuario");
 
-  fireEvent.change(input, { target: { value: "RamiroSammataro" } });
+  fireEvent.change(input, { target: { value: "Carlos" } });
 
   fireEvent.submit(view.getByTestId("name-form"));
 
-  view.getByText("Usuario: RamiroSammataro");
+  view.getByText("Usuario: Carlos");
 });
 
 test("Nombre Usuario - Ingreso nombre valido 2", () => {
@@ -68,11 +69,11 @@ test("Nombre Usuario - Ingreso nombre valido 2", () => {
 
   const input = view.getByPlaceholderText("Ingrese Nombre de Usuario");
 
-  fireEvent.change(input, { target: { value: "Gianluca25" } });
+  fireEvent.change(input, { target: { value: "Martin25" } });
 
   fireEvent.submit(view.getByTestId("name-form"));
 
-  view.getByText("Usuario: Gianluca25");
+  view.getByText("Usuario: Martin25");
 });
 
 test("Arriesgar Palabra - Arriesgo palabra vacía", () => {
