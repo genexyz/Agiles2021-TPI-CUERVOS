@@ -30,8 +30,4 @@ jobs:
         env:
           CI: false
       - run: npm test
-      - name: Install Google Chrome
-        run: |
-          chmod +x ./scripts/InstallChrome.sh
-                      ./scripts/InstallChrome.sh
       - run: npm run test2
