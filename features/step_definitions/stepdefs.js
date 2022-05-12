@@ -1,10 +1,19 @@
 const assert = require("assert");
 const { Given, When, Then } = require("@cucumber/cucumber");
 const { Builder, By, Key, until } = require("selenium-webdriver");
+const chrome = require("selenium-webdriver/chrome");
+
+const screen = {
+  width: 640,
+  height: 480,
+};
 
 // Given general para los 4 escenarios, no es necesario escribirlo en cada uno
 Given("Me quedan vidas restantes", async function () {
-  let driver = new Builder().forBrowser("chrome").build();
+  let driver = new Builder()
+    .forBrowser("chrome")
+    .setChromeOptions(new chrome.Options().headless().windowSize(screen))
+    .build();
 
   await driver.get("https://agiles2021-tpi-cuervos.vercel.app/");
 
