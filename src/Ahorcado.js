@@ -336,7 +336,7 @@ const Ahorcado = () => {
               </Form.Group>
               <div className="text-center">
                 <Button variant="primary" type="submit">
-                  Confirmar
+                  Confirmar Letra
                 </Button>
               </div>
             </Form>
@@ -353,7 +353,7 @@ const Ahorcado = () => {
               </Form.Group>
               <div className="text-center">
                 <Button variant="primary" type="submit">
-                  Confirmar
+                  Confirmar Palabra
                 </Button>
               </div>
             </Form>

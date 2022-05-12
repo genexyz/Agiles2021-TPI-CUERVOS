@@ -9,32 +9,29 @@ const screen = {
 };
 
 // Given general para los 4 escenarios, no es necesario escribirlo en cada uno
+let driver = new Builder()
+  .forBrowser("chrome")
+  .setChromeOptions(new chrome.Options().headless().windowSize(screen))
+  .build();
+
 Given("Me quedan vidas restantes", async function () {
-  let driver = new Builder()
-    .forBrowser("chrome")
-    .setChromeOptions(new chrome.Options().headless().windowSize(screen))
-    .build();
-
   await driver.get("https://agiles2021-tpi-cuervos.vercel.app/");
-
-  console.log("------------------------- Logs Begin -------------------------");
 
   await driver.findElement(By.id("formUsername")).sendKeys("Usuario");
 
   await driver.findElement(By.className("btn-primary")).click();
 
-  var letterTextbox = await driver.findElement(By.id("formLetter"));
-  await letterTextbox.sendKeys("V");
-  console.log(await letterTextbox.getAttribute("value"));
+  let lives = await driver.findElement(By.id("vidas")).getText();
 
-  await driver.quit();
-
-  return "success";
+  assert(lives > 0);
 });
 
 // Escenario 1: Adivina la Palabra Secreta
-When("Intento CUERVOS como la palabra secreta", function () {
-  // Escribir codigo que torne la frase superior en acciones concretas
+When("Intento CUERVOS como la palabra secreta", async function () {
+  await driver.findElement(By.id("formWord")).sendKeys("cuervos");
+
+  // await driver.findElement(By.linkText("Confirmar Palabra")).click();
+
   return "success";
 });
 Then("Se me informa que he ganado", function () {
